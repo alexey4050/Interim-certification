@@ -21,14 +21,14 @@ def show(text):
     array = file_operation.read_file()
     if text == 'date':
         date = input('Введите дату в формате dd.mm.yyyy: ')
-    for note in array:
-        if text = 'all':
+    for notes in array:
+        if text == 'all':
             logic = False
             print(Note.Note.map_note(notes))
         if text == 'id':
             logic = False
             print('ID: ' + Note.Note.get_id(notes))
-        if text = 'date':
+        if text == 'date':
             logic = False
             if date in Note.Note.get_date(notes):
                 print(Note.Note.map_note(notes))
@@ -43,16 +43,16 @@ def id_edit_del_show(text):
     for notes in array:
         if id == Note.Note.get_id(notes):
             logic = False
-            if text = 'edit':
+            if text == 'edit':
                 note = ui.create_note(number)
                 Note.Note.set_title(notes, note.get_title())
                 Note.Note.set_body(notes, note.get_body())
                 Note.Note.set_date(notes)
                 print('Заметка изменена...')
-            if text = 'del':
+            if text == 'del':
                 array.remove(notes)
                 print('Заметка удалена...')
-            if text = 'show':
+            if text == 'show':
                 print(Note.Note.map_note(notes))
         if logic == True:
             print('Такой заметки нет или ввели неверный id')
