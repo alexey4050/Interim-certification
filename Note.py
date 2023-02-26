@@ -21,8 +21,8 @@ class Note:
     def get_date(note):
         return note.date
         
-    def get_id(note):
-        return note id = str(uuid())[0:3]
+    def set_id(note):
+        note.id = str(uuid.uuid1())[0:3]
         
     def set_title(note, title):
         note.title = title
@@ -37,5 +37,5 @@ class Note:
         return note.id + ';' + note.title + ';' + note.body + ';' + note.date
         
     def map_note(note):
-        return '\nID: + note.id + '\n' + 'Назначение: ' + note.title + '\n' + 'Описание: ' + note.body + '\n' + 'Дата публикации: ' + note.date
+        return '\nID: ' + note.id + '\n' + 'Название: ' + note.title + '\n' + 'Описание: ' + note.body + '\n' + 'Дата публикации: ' + note.date
     
