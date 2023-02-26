@@ -7,12 +7,12 @@ number = 6
 
 def add():
     note = ui.create_note(number)
-    array = file_operatio.read_file()
+    array = file_operation.read_file()
     for notes in array:
         if Note.Note.get_id(note) == Note.Note.get_id(notes):
             Note.Note.set_id(notes)
     array.append(note)
-    file.append.write_file(array, 'a')
+    file_operation.write_file(array, 'a')
     print('Заметка добавлена...')
   
   
