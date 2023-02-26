@@ -4,7 +4,7 @@ import ui
 
 def run():
   input_from_user = ''
-  while input_from_user != '7';
+  while input_from_user != '7':
       ui.menu()
       input_from_user = input().strip()
       if input_from_user == '1':
@@ -22,7 +22,7 @@ def run():
       if input_from_user == '6':
           f.show('id')
           f.id_edit_del_show('show')
-      if input_from_user == '7":
+      if input_from_user == '7':
           ui.goodbuy()
           break
           
